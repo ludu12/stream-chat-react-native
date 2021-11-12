@@ -5,7 +5,7 @@ module.exports = {
   moduleNameMapper: {
     'mock-builders(.*)$': '<rootDir>/src/mock-builders$1',
   },
-  preset: 'react-native',
+  preset: './jest-preset.js',
   setupFiles: [
     require.resolve('./jest-setup.js'),
     './src/mock-builders/native/react-native-mock.js',
