@@ -4,6 +4,7 @@ import { getDisplayName } from '../utils/getDisplayName';
 
 import type { Attachment } from 'stream-chat';
 
+import type { ChannelCapabilitiesContextValue } from '../channelCapabilitiesContext/ChannelCapabilitiesContext';
 import type { Alignment, MessageContextValue } from '../messageContext/MessageContext';
 import type { MessagesContextValue } from '../messagesContext/MessagesContext';
 
@@ -37,6 +38,7 @@ export type MessageOverlayData<
   Us extends UnknownType = DefaultUserType,
 > = {
   alignment?: Alignment;
+  channelCapabilities?: ChannelCapabilitiesContextValue;
   clientId?: string;
   files?: Attachment<At>[];
   groupStyles?: GroupType[];
